@@ -1,0 +1,584 @@
+html {
+  scroll-behavior: smooth;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  background-color: #000000;
+  color: #fff;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #b38b59;
+  margin-left: -10px; /* đẩy logo gần sát hơn */
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  display: block; /* tránh khoảng trắng dư */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #b38b59;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+.hero {
+  background: url('../assets/images/banner.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  min-height: 100vh;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #b38b59
+}
+
+.hero-content p {
+  font-size: 1.2rem;  
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: #b38b59;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #9a754c;
+}
+
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  gap: 2rem;
+  align-items: center;
+}
+.intro-text {
+  flex: 1;
+  padding: 3rem 2rem;
+  color: #b38b59
+}
+.intro p {
+  margin-top: 2rem;
+  color: white;
+}
+.intro-image {
+  flex: 1;
+}
+.intro-image img {
+  width: auto;
+  height: 100vh;
+  border-radius: 10px;
+}
+
+.intro-image:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+
+/* Philosophy */
+/* OUR PHILOSOPHY SECTION */
+.philosophy {
+  padding: 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.philosophy-title {
+  margin-bottom: 30px;
+}
+
+.philosophy {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.philosophy-title {
+  margin-bottom: 30px;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.philosophy-card {
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  cursor: pointer;
+}
+
+.philosophy-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+
+.card-front h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.card-back {
+  background-color: rgba(179, 139, 89, 0.85);
+  transform: rotateY(180deg);
+  color: #fff;
+  line-height: 1.6;
+}
+
+
+.philosophy-item h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.philosophy-item p {
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.philosophy-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+h2 {
+  font-size: 2rem;
+  color: #b38b59;
+}
+
+
+
+
+
+
+.menu-carousel {
+  position: relative;
+  padding: 80px 20px;
+  background-color: #000000;
+  color: white;
+  text-align: center;
+}
+
+.menu-carousel h2 {
+  margin-bottom: 30px;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 60%;
+}
+
+.overlay-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.overlay-text p {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Arrows */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: white;
+  background: rgba(0,0,0,0.3);
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  z-index: 10;
+  display: none;
+}
+
+.carousel-container:hover .carousel-nav {
+  display: block;
+}
+
+.carousel-nav.prev {
+  left: 10px;
+}
+
+.carousel-nav.next {
+  right: 10px;
+}
+
+/* Dots */
+.carousel-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  background-color: #777;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: white;
+}
+
+
+
+
+/* Footer */
+.footer {
+  background-color: #28282a;
+  color: white;
+  padding: 2rem 2rem 2rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-contact,
+.footer-map {
+  flex: 1;
+  min-width: 280px;
+}
+
+.footer-contact h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-contact p,
+.footer-contact a {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  color: #ccc;
+}
+
+.footer-socials {
+  margin-top: 1rem;
+}
+
+.footer-socials img {
+  width: 28px;
+  margin-right: 1rem;
+  filter: invert(1);
+}
+
+.footer-map iframe {
+  border-radius: 8px;
+  width: 100%;
+  height: 250px;
+}
+
+.footer-copyright {
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  text-align: center;
+  color: #888;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+/* MENUUUUUUUUUMENUUUUUUUUU */
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  background: url('../assets/images/banner.jpg') center center / cover no-repeat fixed;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.menu-intro {
+  position: relative;
+  height: 550px;
+  background-image: url('assets/images/intro-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+
+.hero,
+.intro,
+.menu-carousel,
+.philosophy {
+  background: rgba(0, 0, 0, 0.5); /* màu nền mờ */
+  backdrop-filter: blur(4px);
+}
+
+.intro-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.menu-intro-content {
+  position: relative;
+  text-align: justify;
+  z-index: 2;
+  max-width: 980px;
+}
+
+.menu-intro-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  text-align:center;
+  font-weight: 700;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+  color: #b38b59;
+}
+
+.menu-intro-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.menu-notes {
+  margin-top: 25px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-shadow: none;
+  color: #eee;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.menu-section {
+  padding: 60px 80px 80px;
+  position: relative;
+  margin-top: -100px;
+  z-index: 2;
+
+}
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.menu-subtitle {
+  font-size: 1.8rem;
+  margin-top: 1em;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+
+.section-title {
+  text-align: center;
+  padding-bottom: 60px; 
+  font-size: 2.8rem;
+  margin-top: 50px;
+  color: #fff;
+}
+
+.menu-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+  max-width: 860px; /* hoặc thử 900px/1000px tùy layout */
+  margin: 0 auto;
+}
+
+.menu-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: scale(1.03);
+}
+
+.menu-card .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  opacity: 0;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.menu-card:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+}
+
+.overlay h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #b38b59;
+}
+
+.overlay p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  padding: 0 5px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
